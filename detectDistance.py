@@ -15,9 +15,9 @@ def initGpioPin(inPin, outPin, pinType):
     GPIO.setup(outPin, GPIO.OUT)
     GPIO.setup(outPin, GPIO.OUT, initial=GPIO.LOW)
 
-def detectDis(triggerPin, echoPin):
+def detectDis(triggerPin, echoPin, pinType):
 
-    initGpioPin(echoPin, triggerPin, GPIO.BCM)
+    initGpioPin(echoPin, triggerPin, pinType)
 
     #wait 2 seconds to start get distance
     time.sleep(2)
@@ -43,7 +43,7 @@ def gpioCleanup():
 
 try:
     while True:
-        distance = detectDis(2, 3)
+        distance = detectDis(2, 3, GPIO.BCM)
         print "distance is %f" % distance
 except KeyboardInterrupt:
     gpioCleanup()
