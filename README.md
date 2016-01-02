@@ -5,7 +5,9 @@
 
 ##1. detect distance 
 
-calculate distance by raspberry and utral sound.
+1. calculate distance by raspberry and utral sound.
+
+2. play a voice when the door is opened.2. play a voice when the door is opened.
 
 result :
 
